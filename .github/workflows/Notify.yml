@@ -1,0 +1,21 @@
+name: Discord Notification
+
+on:
+  push:
+    branches:
+      - main
+  # workflow_run:
+  #   workflows: ["Deploy to Production"]
+  #   types:
+  #     - completed
+
+jobs:
+  notify-discord:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Send message to Discord
+        run: |
+          curl -X POST -H "Content-Type: application/json" \
+          -d '{"content": "My Production is deployed !"}' \
+          ${{ secrets.DISCORD_WEBHOOK_URL }}
