@@ -12,15 +12,15 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-        steps:
+    steps:
       - name: Checkout code
         uses: actions/checkout@v2
-    
+
       - name: Get Changelog
         id: get_changelog
         run: |
           echo "CHANGELOG=$(tail -n 5 CHANGELOG.md)" >> $GITHUB_ENV
-    
+
       - name: Send message to Discord
         if: failure()
         env:
