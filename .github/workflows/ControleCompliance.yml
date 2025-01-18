@@ -1,4 +1,4 @@
-name: Controle Compliance
+name: Controle
 
 on:
   workflow_dispatch:
