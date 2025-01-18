@@ -6,13 +6,21 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test:dev": "npx vitest --watch",
+    "test": "npx vitest run",
+    "lint": "npx eslint"
   },
   "dependencies": {
     "vue": "^3.5.13"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.1",
-    "vite": "^6.0.3"
+    "esbuild": "^0.24.0",
+    "eslint": "^9.17.0",
+    "eslint-plugin-vue": "^9.32.0",
+    "jsdom": "^25.0.1",
+    "vite": "^6.0.3",
+    "vitest": "^2.1.8"
   }
 }
